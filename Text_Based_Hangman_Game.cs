@@ -1,4 +1,3 @@
-```CSharp
 using System;
 using System.Collections.Generic;
 
@@ -17,25 +16,5 @@ class Program
         listwords[7] = "thailand";
         listwords[8] = "assembly";
         listwords[9] = "university";
-        Random randGen = new Random();
-        var idx = randGen.Next(0, 9);
-        string mysteryWord = listwords[idx];
-        char[] guess = new char[mysteryWord.Length];
-        Console.Write("Please enter your guess: ");
-
-        for (int p = 0; p < mysteryWord.Length; p++)
-            guess[p] = '*';
-
-        while (true)
-        {
-            char playerGuess = char.Parse(Console.ReadLine());
-            for (int j = 0; j < mysteryWord.Length; j++)
-            {
-                if (playerGuess == mysteryWord[j])
-                    guess[j] = playerGuess;
-            }
-            Console.WriteLine(guess);
-        }
     }
 }
-```
