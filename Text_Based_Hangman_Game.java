@@ -1,8 +1,11 @@
-import java.util.Scanner;
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-public class HangmanGame {
-    private static String[] words = {"programmer", "java", "hangman", "game", "console"};
-    private static String word = words[(int) (Math.random() * words.length)];
-    private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
-    private static int count = 0;
-}
+        while (count < 7 && asterisk.contains("*")) {
+            System.out.println("Guess any letter in the word");
+            System.out.println(asterisk);
+            String guess = sc.next();
+            hang(guess);
+        }
+        sc.close();
+    }
